@@ -51,6 +51,8 @@ while ' - ' in field():
                 field()
                 print(f'Выиграл {char}!')
                 break 
+            else:
+                print('Ничья!')
             
             step += 1
             char = 'o'
