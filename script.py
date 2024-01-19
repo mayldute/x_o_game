@@ -1,6 +1,4 @@
-playing_field = [[' - ', ' - ', ' - '],
-                 [' - ', ' - ', ' - '],
-                 [' - ', ' - ', ' - ']]
+playing_field = [[' - ' for j in range(3)] for i in range(3)]
 
 step = 0
 char = 'x'
@@ -16,10 +14,9 @@ def win_check():
     row_temp = []
     count = [0, 0, 0]
     
-    if ((playing_field[0][0] == playing_field[1][1] == playing_field[2][2]) or \
-       (playing_field[2][0] == playing_field[1][1] == playing_field[0][2]) and playing_field[1][1] != ' - '):
-           return True
-
+    if (((playing_field[0][0] == playing_field[1][1] == playing_field[2][2]) or \
+       (playing_field[2][0] == playing_field[1][1] == playing_field[0][2])) and playing_field[1][1] != ' - '):
+            return True
     
     for row in playing_field:
         if len(set(row)) == 1 and ' - ' not in row:
