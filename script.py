@@ -1,5 +1,6 @@
 playing_field = [[' - ' for j in range(3)] for i in range(3)]
 
+res = ''
 step = 0
 char = 'x'
 
